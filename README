@@ -1,0 +1,97 @@
+# Cancer Diagnosis Probability Calculator
+
+
+## Author
+
+## This application was developed by Anna Manucharyan.
+
+# Developed June 2023 in Hellenic Mediterranean University
+
+
+This is a Python application that calculates the probability of having malignant breast cancer based on various input parameters. The application utilizes the Problog probabilistic programming language and a machine learning model.
+
+
+
+## Prerequisites
+
+Before running the application, make sure you have the following dependencies installed:
+
+- Python (version 3.6 or higher)
+- pandas
+- scikit-learn
+- matplotlib
+- tkinter
+- Problog
+
+You can install these dependencies using the `pip` package manager. For example:
+
+```
+pip install pandas scikit-learn matplotlib problog
+```
+
+## Getting Started
+
+1. Clone the repository or download the source code files to your local machine.
+
+2. Open a terminal or command prompt and navigate to the project directory.
+
+3. Run the following command to start the application:
+
+   ```
+   python cancer_diagnosis.py
+   ```
+
+## Usage
+
+The application provides a graphical user interface (GUI) for entering input parameters and calculating the probability of having malignant breast cancer. Follow these steps to use the application:
+
+1. Launch the application by running the `cancer_diagnosis.py` file.
+
+2. Enter the values for the following parameters in the provided entry fields:
+
+   - Radius
+   - Texture
+   - Perimeter
+   - Area
+   - Smoothness
+   - Compactness
+   - Concavity
+   - Symmetry
+   - Fractal Dimension
+
+3. Click the "Calculate Probability" button to calculate the probability of having malignant cancer based on the provided input.
+
+4. The calculated probability will be displayed in the application window.
+
+## Data Source
+
+The application uses a dataset of breast cancer diagnosis records. The dataset is loaded from a CSV file (`cancer_data.csv`), which should be placed in the same directory as the application script. The dataset contains various features of breast cancer tumors, including the diagnosis (malignant or benign) and numerical values for different parameters.
+
+## Model Training and Evaluation
+
+The application uses a machine learning model trained on the provided dataset to calculate the probability of having malignant cancer. The model is trained using the Problog library, which performs logical formula induction (LFI) to learn the parameters of a Probabilistic Logic Program (PLP) from input-output examples. The learned model is then used to predict the probability of malignancy based on the input parameters.
+
+During model training, the dataset is split into training and testing sets using a 80:20 ratio. The model's performance is evaluated using the following metrics:
+
+- Accuracy: The proportion of correctly predicted labels (malignant or benign) out of all predictions.
+- Precision: The proportion of correctly predicted malignant labels out of all predicted malignant labels.
+- Recall: The proportion of correctly predicted malignant labels out of all actual malignant labels.
+- F1 Score: The harmonic mean of precision and recall.
+
+These evaluation metrics are printed in the terminal when the model is trained and used for prediction.
+
+## Thresholds
+
+The application uses predefined thresholds for each input parameter to determine if it is considered "small" or "short" or falls within other categories. These thresholds are defined in the `thresholds` dictionary in the code. The thresholds are used to transform the numerical input values into logical terms that are then fed into the Problog model.
+
+## Restart and Exit
+
+The application provides two buttons for user interaction:
+
+- Restart: Clicking the "Restart" button will clear all the input fields, allowing the user to enter new values.
+- Exit: Closing the application window will exit the program.
+
+## Disclaimer
+
+This application is provided for educational and demonstration purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for personalized medical guidance.
+
